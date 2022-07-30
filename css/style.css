@@ -1,0 +1,152 @@
+/*Global*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  font-size: 1.4rem;
+  color: #111;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/*Header*/
+
+/*Main Nav*/
+.mainHeader {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #dedede;
+}
+
+.mainNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.logo {
+  text-decoration: none;
+  color: inherit;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.fi {
+  font-size: 2.4rem;
+}
+
+.searchForm {
+  display: flex;
+  border: 1px solid #dedede;
+}
+
+.searchForm input {
+  border: none;
+  font-size: 1.4rem;
+  padding: 1rem;
+  outline: none;
+  font-family: "Merriweather", serif;
+}
+
+.searchForm .btn {
+  background: #111;
+  color: #f2f2f2;
+  font-family: "Merriweather", serif;
+  font-size: 1.4rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+/*Main*/
+
+/*Book Volumes*/
+.bookVols {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 4rem 0 2rem;
+}
+
+/*Book Volume*/
+.bookVol {
+  display: flex;
+  gap: 2rem;
+}
+
+.bookVolCover {
+  align-self: flex-start;
+  max-width: 100%;
+  border: 1px solid #dedede;
+}
+
+.bookVolMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.metaHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metaTitle,
+.metaTitle:link,
+.metaTitle:visited {
+  align-self: flex-start;
+  font-size: 2rem;
+  line-height: 1.3;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.metaReleaseYear {
+  color: #666;
+}
+.metaDescription {
+  line-height: 1.5;
+}
+
+/*Pagination*/
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0 4rem;
+}
+
+.current {
+  font-weight: 700;
+}
+
+/*Media query*/
+
+@media (max-width: 500px) {
+  .bookVol {
+    align-items: center;
+  }
+
+  .metaDescription {
+    display: none;
+  }
+}
