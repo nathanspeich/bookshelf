@@ -62,7 +62,7 @@ body {
   color: #111;
 }
 
-.container {
+.pageContainer {
   max-width: 90rem;
   margin: 0 auto;
   padding: 0 2rem;
@@ -80,7 +80,6 @@ body {
 
 /*Main Nav*/
 .mainHeader {
-  background-color: #f2f2f2;
   border-bottom: 1px solid #dedede;
 }
 
@@ -122,6 +121,7 @@ body {
   color: #f2f2f2;
   font-family: "Merriweather", serif;
   font-size: 1.563rem;
+  font-weight: 400;
   padding: 1rem;
   cursor: pointer;
 }
