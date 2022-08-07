@@ -126,8 +126,8 @@ body {
 
 /*Book Volumes*/
 .bookVols {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 4rem;
   padding: 4rem 0 2rem;
 }
@@ -190,7 +190,7 @@ body {
 
 /*Media query*/
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .bookVol {
     align-items: center;
   }
