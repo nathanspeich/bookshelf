@@ -73,20 +73,3 @@ function truncate(p, n) {
 function spaceBetweenAuthors(authors) {
   return authors.slice(",").join(", ");
 }
-
-//Media query
-function checkMediaQuery() {
-  const mobileMenu = document.querySelector(".fi");
-  const searchForm = document.querySelector(".searchForm");
-  // If the inner width of the window is greater then 768px
-  if (window.innerWidth <= 700) {
-    // Then log this message to the console
-    mobileMenu.classList.remove("hidden");
-    searchForm.style.display = "none";
-  } else {
-    mobileMenu.classList.add("hidden");
-    searchForm.style.display = "flex";
-  }
-}
-// Add a listener for when the window resizes
-window.addEventListener("resize", checkMediaQuery);

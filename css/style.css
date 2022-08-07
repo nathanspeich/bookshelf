@@ -68,10 +68,6 @@ body {
   padding: 0 2rem;
 }
 
-.hidden {
-  display: none;
-}
-
 html,
 body {
   text-size-adjust: none;
@@ -128,6 +124,10 @@ body {
   font-size: 1.563rem;
   padding: 1rem;
   cursor: pointer;
+}
+
+.fi-rr-menu-burger {
+  display: none;
 }
 
 /*Main*/
@@ -198,11 +198,19 @@ body {
 
 /*Media query*/
 
+@media (max-width: 700px) {
+  .searchForm {
+    display: none;
+  }
+  .fi-rr-menu-burger {
+    display: block;
+  }
+}
+
 @media (max-width: 600px) {
   .bookVol {
     align-items: center;
   }
-
   .metaDescription {
     display: none;
   }
