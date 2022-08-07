@@ -191,6 +191,12 @@ body {
 /*Media query*/
 
 @media (max-width: 700px) {
+  .metaDescription {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
   .bookVol {
     align-items: center;
   }

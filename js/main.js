@@ -37,7 +37,7 @@ function getFetch(event) {
               </div>
               <p class="metaDescription">${truncate(
                 book.volumeInfo.description,
-                300
+                200
               )}</p>
             </div>
         </article>
