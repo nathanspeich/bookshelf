@@ -68,6 +68,8 @@ body {
   padding: 0 2rem;
 }
 
+/*Vendor Prefixes*/
+
 html,
 body {
   text-size-adjust: none;
@@ -87,8 +89,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem 0;
 }
 
 .logo {
@@ -128,6 +129,8 @@ body {
 
 .fi-rr-menu-burger {
   display: none;
+  line-height: 0;
+  cursor: pointer;
 }
 
 /*Main*/
@@ -198,12 +201,18 @@ body {
 
 /*Media query*/
 
-@media (max-width: 700px) {
-  .searchForm {
-    display: none;
+@media (max-width: 550px) {
+  .mainNav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
   }
-  .fi-rr-menu-burger {
-    display: block;
+  .searchForm {
+    width: 100%;
+  }
+  .searchForm input {
+    width: 100%;
   }
 }
 
