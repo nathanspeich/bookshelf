@@ -1,51 +1,37 @@
 /*Font Size System
 Major Third https://type-scale.com/
-
 7.451rem
 74.51px
-
 5.96rem
 59.60px
-
 4.768rem
 47.68px
-
 3.815rem
 38.15px
-
 3.052rem
 30.52px
-
 2.441rem
 24.41px
-
 1.953rem
 19.53px
-
 1.563rem
 15.63px
-
 1.25rem
 12.50px
-
 1rem
 10.00px
-
 0.8rem
 8.00px
-
 0.64rem
 6.40px
-
 0.512rem
 5.12px
-
 0.41rem
 4.10px
-
 */
 
 /*Global*/
+
 * {
   padding: 0;
   margin: 0;
@@ -57,170 +43,365 @@ html {
 }
 
 body {
-  font-family: "Merriweather", serif;
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgb(242, 242, 242);
   font-size: 1.563rem;
-  color: #111;
+  background-color: #161b22;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  color: rgb(242, 242, 242);
+}
+
+h1 {
+  font-size: 4.768rem;
+}
+
+h2 {
+  font-size: 3.052rem;
 }
 
 .pageContainer {
-  max-width: 90rem;
+  max-width: 110rem;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 3rem;
 }
 
-/*Vendor Prefixes*/
-
-html,
-body {
-  text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  -ms-text-size-adjust: none;
-  -moz-text-size-adjust: none;
+.btn {
+  border: 1px solid rgb(48, 54, 61);
+  background: none;
+  color: rgb(242, 242, 242);
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s;
+  border-radius: 0.6rem;
 }
 
-/*Header*/
+.btn .fi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Main Header*/
+
+.mainHeader {
+  padding: 2rem 0;
+}
 
 /*Main Nav*/
-.mainHeader {
-  border-bottom: 1px solid #dedede;
-}
 
 .mainNav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 0;
 }
 
-.logo {
-  text-decoration: none;
-  color: inherit;
-  font-size: 3.052rem;
-  font-weight: 700;
-}
-
-.fi {
+.navLogo a:link,
+.navLogo a:visited {
   font-size: 2.441rem;
-}
-
-.searchForm {
-  display: flex;
-  border: 1px solid #dedede;
-}
-
-.searchForm input {
-  border: none;
-  font-size: 1.563rem;
-  padding: 1rem;
-  outline: none;
-  font-family: "Merriweather", serif;
-}
-
-.searchForm .btn {
-  background: #111;
-  border: none;
-  color: #f2f2f2;
-  font-family: "Merriweather", serif;
-  font-size: 1.563rem;
-  font-weight: 400;
-  padding: 1rem;
-  cursor: pointer;
-}
-
-.fi-rr-menu-burger {
-  display: none;
-  line-height: 0;
-  cursor: pointer;
-}
-
-/*Main*/
-
-/*Book Volumes*/
-.bookVols {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 4rem;
-  padding: 4rem 0 2rem;
-}
-
-/*Book Volume*/
-.bookVol {
-  display: flex;
-  gap: 2rem;
-}
-
-.bookVolCover {
-  align-self: flex-start;
-  max-width: 100%;
-  border: 1px solid #dedede;
-}
-
-.bookVolMeta {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.metaHeader {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.metaTitle,
-.metaTitle:link,
-.metaTitle:visited {
-  align-self: flex-start;
-  font-size: 1.953rem;
-  line-height: 1.3;
-  color: inherit;
-  text-decoration: none;
   font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(4, 195, 127);
 }
 
-.metaReleaseYear {
-  color: #666;
+.navMenu {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  list-style: none;
 }
-.metaDescription {
+
+.navLink:link,
+.navLink:visited {
+  font-size: 1.953rem;
+  font-weight: 600;
+  border-bottom: 0.2rem solid transparent;
+  transition: all 0.3s;
+}
+
+.navIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Section About*/
+
+#about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.aboutMedia {
+  width: 35%;
+}
+
+.aboutImg {
+  display: inline-block;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.aboutTextBox {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.aboutTextBox span {
+  font-size: 2.441rem;
+  font-weight: 600;
+  color: rgb(4, 195, 127);
+}
+
+.aboutText {
+  font-size: 1.953rem;
+  line-height: 1.5;
+}
+
+/*Section Projects*/
+
+#projects {
+  padding: 3rem 0;
+}
+
+.projectsHeading {
+  margin-bottom: 3rem;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+  row-gap: 6rem;
+}
+
+.project {
+  background-color: rgb(13, 17, 23);
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+
+.projectImg {
+  max-width: 100%;
+  display: block;
+}
+
+.projectContent {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.projectTextBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.projectTitle,
+.projectTitle:link,
+.projectTitle:visited {
+  font-size: 2.441rem;
+  line-height: 1.5;
+  align-self: flex-start;
+  transition: all 0.3s;
+}
+
+.projectText {
   font-size: 1.563rem;
   line-height: 1.5;
 }
 
-/*Pagination*/
-.pagination {
+.projectFooter {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.projectFooter .btn {
+  font-size: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  padding: 2rem 0 4rem;
+  gap: 0.5rem;
+  flex: 1;
 }
 
-.current {
-  font-weight: 700;
+/*Section Contact*/
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem 0;
 }
 
-/*Media query*/
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
-@media (max-width: 550px) {
-  .mainNav {
+.contactForm fieldset {
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+#name {
+  width: 50%;
+}
+
+#email {
+  width: 50%;
+}
+
+.contactForm input {
+  height: 4rem;
+  padding: 0 1rem;
+  background: none;
+}
+
+.contactForm input,
+.contactForm textarea {
+  font-size: 1.563rem;
+  font-family: "Soure Sans Pro", sans-serif;
+  background: rgb(13, 17, 23);
+  border: 1px solid rgb(48, 54, 61);
+  color: rgb(242, 242, 242);
+  outline: none;
+  border-radius: 0.6rem;
+}
+
+.contactForm textarea {
+  padding: 1rem;
+  resize: none;
+}
+
+.contactForm .btn {
+  align-self: flex-start;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.563rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.6rem;
+  background: rgb(4, 195, 127);
+  color: rgb(13, 17, 23);
+}
+
+/*Main Footer*/
+
+.mainFooter {
+  padding: 2rem 0;
+}
+
+.footerNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.madeBy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footerNav .navMenu {
+  gap: 1.5rem;
+}
+
+/*Media Queries*/
+
+@media (min-width: 0px) and (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    border-color: rgb(4, 195, 127);
+  }
+  .navLink:hover,
+  .navLink:active {
+    border-color: rgb(4, 195, 127);
+    color: rgb(4, 195, 127);
+  }
+  .projectTitle:hover,
+  .projectTitle:active {
+    color: rgb(4, 195, 127);
+  }
+  .contactForm input:focus {
+    border-color: rgb(4, 195, 127);
+  }
+  .contactForm textarea:focus {
+    border-color: rgb(4, 195, 127);
+  }
+}
+
+@media (max-width: 930px) {
+  html {
+    font-size: 57.5%;
+  }
+}
+
+@media (max-width: 830px) {
+  html {
+    font-size: 52.5%;
+  }
+}
+
+@media (max-width: 730px) {
+  #about {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
   }
-  .searchForm {
-    width: 100%;
+  .aboutMedia {
+    display: none;
   }
-  .searchForm input {
+  .aboutTextBox {
     width: 100%;
   }
 }
 
-@media (max-width: 600px) {
-  .bookVol {
-    align-items: center;
+@media (max-width: 630px) {
+  .projects {
+    grid-template-columns: 1fr;
   }
-  .metaDescription {
-    display: none;
+}
+
+@media (max-width: 530px) {
+  .contactForm fieldset {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  #name {
+    width: 100%;
+  }
+  #email {
+    width: 100%;
+  }
+  .contactForm .btn {
+    width: 100%;
   }
 }
